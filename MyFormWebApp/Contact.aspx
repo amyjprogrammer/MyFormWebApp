@@ -18,17 +18,18 @@
     <div>
         <label>Name</label>
         <asp:TextBox runat="server" ID="txtName"/>  
-        <asp:RequiredFieldValidator ErrorMessage="Add Name" ControlToValidate="txtName" runat="server" ID="rfvName" CssClass="alert-danger" />
+        <asp:RequiredFieldValidator ErrorMessage="Add Name" ControlToValidate="txtName" runat="server" ID="rfvName" CssClass="alert-danger" Display="Dynamic" />
     </div>
      <div>
         <label>Email</label>
         <asp:TextBox runat="server" ID="txtEmail"/>  
-         <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email" ControlToValidate="txtEmail" runat="server" CssClass="alert-info" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"/>
-         <asp:RequiredFieldValidator ErrorMessage="Add email" ControlToValidate="txtEmail" runat="server" CssClass="alert-danger" />
+         <asp:RegularExpressionValidator ErrorMessage="Enter Valid Email" ControlToValidate="txtEmail" runat="server" CssClass="alert-info" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$" Display="Dynamic"/>
+         <asp:RequiredFieldValidator ErrorMessage="Add email" ControlToValidate="txtEmail" runat="server" CssClass="alert-danger" Display="Dynamic" />
     </div>
      <div>
         <label>Age</label>
         <asp:TextBox runat="server" ID="txtAge"/>  
+         <asp:RequiredFieldValidator ErrorMessage="Add Age" ControlToValidate="txtAge" runat="server" CssClass="alert-danger" Display="Dynamic"/>
     </div>
     <div>
         <label>Your Favorite Color:</label>
@@ -39,6 +40,7 @@
             <asp:ListItem Text="Green" />
             <asp:ListItem Text="Purple" />
         </asp:DropDownList>
+        <asp:RequiredFieldValidator ErrorMessage="Add Color" ControlToValidate="ddlColor" runat="server" CssClass="alert-danger" Display="Dynamic"/>
     </div>
     <div>
         <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
